@@ -57,20 +57,11 @@ public class FPSInteractiveController : MonoBehaviour
 
     private void ShowInteraction()
     {
-        /* START TEMP */
-        var renderer = _currentInteractive.GetComponent<MeshRenderer>();
 
-        renderer.material.color = Color.red;
-        /* END TEMP */
     }
 
     private void HideInteraction()
     {
-        /* START TEMP */
-        var renderer = _currentInteractive.GetComponent<MeshRenderer>();
-
-        renderer.material.color = Color.white;
-        /* END TEMP */
 
         _currentInteractive = null;
     }
