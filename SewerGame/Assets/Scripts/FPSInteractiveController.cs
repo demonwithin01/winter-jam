@@ -4,7 +4,7 @@ using System.Collections;
 public class FPSInteractiveController : MonoBehaviour
 {
     [SerializeField]
-    private float _interactionDistance = 5f;
+    private float _interactionDistance = 0.5f;
 
     private Vector3 _screenCenter;
 
