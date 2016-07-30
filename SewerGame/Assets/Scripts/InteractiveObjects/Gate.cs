@@ -35,6 +35,11 @@ public class Gate : InteractiveObject
         }
     }
 
+    public void FinishAnimation()
+    {
+        _animator.Stop();
+    }
+
     private void OpenGate()
     {
         _animator.SetBool( "Open", true );
