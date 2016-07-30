@@ -5,8 +5,8 @@ public class MainGameObjectController : MonoBehaviour
 
     private void Awake()
     {
-        //MainPlayer = 
+        Globals.MainPlayer = GameObject.FindGameObjectWithTag( "Player" );
+        Globals.Dialog = GameObject.Find( "DialogCanvas" ).GetComponent<DialogController>();
     }
     
-    public GameObject MainPlayer { get; set; }
 }

@@ -74,12 +74,15 @@
     <Compile Include="Assets\Scripts\DEnt\_Shared\Point2D.cs" />
     <Compile Include="Assets\Scripts\DEnt\_Shared\Point3D.cs" />
     <Compile Include="Assets\Scripts\DEnt\_Shared\PriorityQueue.cs" />
+    <Compile Include="Assets\Scripts\DialogController.cs" />
     <Compile Include="Assets\Scripts\FPSInteractiveController.cs" />
+    <Compile Include="Assets\Scripts\Globals.cs" />
     <Compile Include="Assets\Scripts\InteractiveObject.cs" />
     <Compile Include="Assets\Scripts\InteractiveObjects\Gate.cs" />
     <Compile Include="Assets\Scripts\InteractiveTextController.cs" />
     <Compile Include="Assets\Scripts\Layers.cs" />
     <Compile Include="Assets\Scripts\MainGameObjectController.cs" />
+    <Compile Include="Assets\Scripts\TextObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
