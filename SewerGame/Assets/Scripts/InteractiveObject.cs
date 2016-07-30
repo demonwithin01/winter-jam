@@ -3,6 +3,7 @@ using System.Collections;
 
 public class InteractiveObject : MonoBehaviour
 {
+    protected bool _canInteract = true;
 
     // Use this for initialization
     void Start()
@@ -15,4 +16,11 @@ public class InteractiveObject : MonoBehaviour
     {
 
     }
+
+    public virtual void UserInteraction( GameObject userGameObject )
+    {
+        Debug.Log( "User Interacting Base - DO NOT USE" );
+    }
+
+    public bool CanInteract { get { return _canInteract; } }
 }
