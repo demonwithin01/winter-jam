@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\FPSInteractiveController.cs" />
     <Compile Include="Assets\Scripts\Globals.cs" />
     <Compile Include="Assets\Scripts\InteractiveObject.cs" />
+    <Compile Include="Assets\Scripts\InteractiveObjects\Book.cs" />
     <Compile Include="Assets\Scripts\InteractiveObjects\Gate.cs" />
     <Compile Include="Assets\Scripts\InteractiveTextController.cs" />
     <Compile Include="Assets\Scripts\Layers.cs" />

@@ -42,6 +42,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        public bool CanMove = true;
+
         // Use this for initialization
         private void Start()
         {
@@ -203,6 +205,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void GetInput(out float speed)
         {
+            if ( CanMove == false )
+            {
+                speed = 0f;
+                return;
+            }
+
             // Read input
             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
             float vertical = CrossPlatformInputManager.GetAxis("Vertical");
@@ -236,7 +244,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void RotateView()
         {
-            m_MouseLook.LookRotation (transform, m_Camera.transform);
+            if ( CanMove )
+            {
+                m_MouseLook.LookRotation( transform, m_Camera.transform );
+            }
         }
 
 
