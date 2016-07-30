@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SewerGame.CSharp.Plugins", "SewerGame.CSharp.Plugins.csproj", "{3AFF7000-8DC0-F53C-F375-A7E9D3CE976F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SewerGame.CSharp", "SewerGame.CSharp.csproj", "{DEFC878A-F2EB-694E-DF13-CDF9BC810496}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SewerGame.CSharp.Editor", "SewerGame.CSharp.Editor.csproj", "{A325FDBC-A2B2-68D3-41A1-E504123F8AB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AFF7000-8DC0-F53C-F375-A7E9D3CE976F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AFF7000-8DC0-F53C-F375-A7E9D3CE976F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AFF7000-8DC0-F53C-F375-A7E9D3CE976F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AFF7000-8DC0-F53C-F375-A7E9D3CE976F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEFC878A-F2EB-694E-DF13-CDF9BC810496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEFC878A-F2EB-694E-DF13-CDF9BC810496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEFC878A-F2EB-694E-DF13-CDF9BC810496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEFC878A-F2EB-694E-DF13-CDF9BC810496}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A325FDBC-A2B2-68D3-41A1-E504123F8AB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A325FDBC-A2B2-68D3-41A1-E504123F8AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A325FDBC-A2B2-68D3-41A1-E504123F8AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A325FDBC-A2B2-68D3-41A1-E504123F8AB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
