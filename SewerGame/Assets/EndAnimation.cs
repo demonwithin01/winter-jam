@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class EndAnimation : StateMachineBehaviour {
 
@@ -7,6 +8,11 @@ public class EndAnimation : StateMachineBehaviour {
     override public void OnStateEnter( Animator animator, AnimatorStateInfo stateInfo, int layerIndex )
     {
         animator.enabled = false;
+        GameObject.Find( "StartCamera" ).SetActive( false );
+        Globals.MainPlayer = GameObject.Find( "PlayerPrefab" );
+        Globals.MainPlayer.GetComponentInChildren<Camera>().enabled = true;
+        Globals.FPSController = Globals.MainPlayer.GetComponentInChildren<FirstPersonController>();
+        Globals.FPSController.ActivateCamera();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

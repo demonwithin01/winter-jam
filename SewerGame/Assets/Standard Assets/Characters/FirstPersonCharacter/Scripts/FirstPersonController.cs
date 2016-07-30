@@ -48,21 +48,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Start()
         {
             m_CharacterController = GetComponent<CharacterController>();
-            m_Camera = Camera.main;
-            m_OriginalCameraPosition = m_Camera.transform.localPosition;
-            m_FovKick.Setup(m_Camera);
-            m_HeadBob.Setup(m_Camera, m_StepInterval);
             m_StepCycle = 0f;
-            m_NextStep = m_StepCycle/2f;
+            m_NextStep = m_StepCycle / 2f;
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
-			m_MouseLook.Init(transform , m_Camera.transform);
         }
 
 
         // Update is called once per frame
         private void Update()
         {
+            if ( m_Camera == null )
+            {
+                return;
+            }
+
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -96,6 +96,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void FixedUpdate()
         {
+            if ( m_Camera == null )
+            {
+                return;
+            }
+
             float speed;
             GetInput(out speed);
             // always move along the camera forward as it is the direction that it being aimed at
@@ -265,6 +270,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
+        }
+
+        public void ActivateCamera()
+        {
+            m_Camera = Camera.main;
+            m_OriginalCameraPosition = m_Camera.transform.localPosition;
+            m_FovKick.Setup( m_Camera );
+            m_HeadBob.Setup( m_Camera, m_StepInterval );
+            m_MouseLook.Init( transform, m_Camera.transform );
         }
     }
 }

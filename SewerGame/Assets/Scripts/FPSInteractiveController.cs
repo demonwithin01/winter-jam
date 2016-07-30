@@ -19,6 +19,11 @@ public class FPSInteractiveController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if ( Camera.main == null )
+        {
+            return;
+        }
+
         FindInteractiveObject();
 
         if  ( _currentInteractive != null && Input.GetKeyDown( KeyCode.E ) && _currentInteractive.CanInteract )
