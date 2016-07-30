@@ -4,7 +4,7 @@ using System.Collections;
 public class FPSInteractiveController : MonoBehaviour
 {
     [SerializeField]
-    private float _interactionDistance = 5f;
+    private float _interactionDistance = 0.5f;
 
     private Vector3 _screenCenter;
 
@@ -19,6 +19,11 @@ public class FPSInteractiveController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if ( Camera.main == null )
+        {
+            return;
+        }
+
         FindInteractiveObject();
 
         if  ( _currentInteractive != null && Input.GetKeyDown( KeyCode.E ) && _currentInteractive.CanInteract )
