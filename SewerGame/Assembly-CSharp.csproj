@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\DEnt\_Shared\Point3D.cs" />
      <Compile Include="Assets\Scripts\DEnt\_Shared\PriorityQueue.cs" />
      <Compile Include="Assets\Scripts\DialogController.cs" />
+     <Compile Include="Assets\Scripts\DialogTrigger.cs" />
      <Compile Include="Assets\Scripts\FPSInteractiveController.cs" />
      <Compile Include="Assets\Scripts\Globals.cs" />
      <Compile Include="Assets\Scripts\InteractiveObject.cs" />
