@@ -4,6 +4,7 @@ using System.Collections;
 public class Gate : InteractiveObject
 {
     private Animator _animator;
+    private AudioSource _AudioSource;
 
     [SerializeField]
     private bool _requiresKey = false;
@@ -17,6 +18,8 @@ public class Gate : InteractiveObject
     void Awake()
     {
         _animator = GetComponent<Animator>();
+
+        _AudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -43,5 +46,7 @@ public class Gate : InteractiveObject
     private void OpenGate()
     {
         _animator.SetBool( "Open", true );
+
+        _AudioSource.Play();
     }
 }
