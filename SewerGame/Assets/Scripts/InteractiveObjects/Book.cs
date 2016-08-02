@@ -12,6 +12,12 @@ public class Book : InteractiveObject
     private bool _movePosition = false;
     private bool _isInPosition = false;
 
+    [SerializeField]
+    private Vector3 _targetRotationOffset;
+
+    [SerializeField]
+    private Vector3 _targetPositionOffset;
+
     // Use this for initialization
     void Start()
     {
@@ -54,6 +60,10 @@ public class Book : InteractiveObject
 
     private void PickupBook()
     {
+        Globals.FPSController.CanMove = false;
+
+        GetComponent<BoxCollider>().enabled = false;
+
         _startPosition = transform.position;
         _startRotation = transform.rotation.eulerAngles;
 
@@ -64,8 +74,12 @@ public class Book : InteractiveObject
         _endPosition = Camera.main.ScreenToWorldPoint( new Vector3( Screen.width / 2f, Screen.height / 2f ) ) + Camera.main.transform.forward;
         _endRotation = Camera.main.transform.rotation.eulerAngles;
 
+        _endPosition += _targetPositionOffset;
+
         _endRotation.y += 180f;
         _endRotation.z = 0f;
+
+        _endRotation += _targetRotationOffset;
 
         if ( _endRotation.y > 360f )
         {
@@ -74,6 +88,5 @@ public class Book : InteractiveObject
 
         _movePosition = true;
 
-        Globals.FPSController.CanMove = false;
     }
 }

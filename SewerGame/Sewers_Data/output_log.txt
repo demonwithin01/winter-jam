@@ -16,14 +16,14 @@ Platform assembly: C:\Development\GIT\winter-jam\SewerGame\Sewers_Data\Managed\U
 Loading C:\Development\GIT\winter-jam\SewerGame\Sewers_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Development\GIT\winter-jam\SewerGame\Sewers_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Development\GIT\winter-jam\SewerGame\Sewers_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.509 seconds
+- Completed reload, in  0.425 seconds
 Platform assembly: C:\Development\GIT\winter-jam\SewerGame\Sewers_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Development\GIT\winter-jam\SewerGame\Sewers_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.546174 ms
+UnloadTime: 1.066272 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 4940 -> priority: 1 
-  Thread -> id: 4ac4 -> priority: 1 
+  Thread -> id: 3f98 -> priority: 1 
+  Thread -> id: 4fb0 -> priority: 1 
